@@ -32,11 +32,11 @@ jobs:
         path: msa/tb/target/docker-postgres
 
     # step7: create release
-    - name: release
-      uses: softprops/action-gh-release@v1
-      #if: startsWith(github.ref, 'refs/tags/')
-      with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        files: "msa/tb/target/docker-postgres/**"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #- name: release
+    #  uses: softprops/action-gh-release@v1
+    #  #if: startsWith(github.ref, 'refs/tags/')
+    #  with:
+    #    tag_name: ${{ steps.tag.outputs.release_tag }}
+    #    files: "msa/tb/target/docker-postgres/**"
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
