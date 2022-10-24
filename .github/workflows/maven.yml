@@ -28,7 +28,7 @@ jobs:
     - name: upload artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ matrix.os }}
+        name: ${{ github.run_number }}
         path: msa/tb/target/docker-postgres
 
     # step7: create release
